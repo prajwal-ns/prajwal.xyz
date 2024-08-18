@@ -1,0 +1,1 @@
+[https://thinketl.com/introduction-to-snowflake-snowpipe-on-aws/](https://thinketl.com/introduction-to-snowflake-snowpipe-on-aws/)
