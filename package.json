@@ -6,10 +6,10 @@
   "type": "module",
   "author": "prajwal <prajwalns49@gmail.com>",
   "license": "MIT",
-  "homepage": "https://quartz.prajwalns.xyz",
+  "homepage": "https://prajwalns.xyz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackyzha0/quartz.git"
+    "url": "https://github.com/prajwal-ns/prajwal.xyz.git"
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",

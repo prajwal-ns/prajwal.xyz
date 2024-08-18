@@ -15,7 +15,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.prajwal.xyz",
+    baseUrl: "prajwal.xyz",
     ignorePatterns: ["private", "templates"],
     defaultDateType: "created",
     theme: {
