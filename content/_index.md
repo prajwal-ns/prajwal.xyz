@@ -1,27 +1,31 @@
 ---
-title: "jzhao.xyz"
+title: "prajwal.xyz"
 tags:
   - evergreen
 ---
+<img src="./home_black_white.jpg" width="701" height="600">
 
-<img src="./banner.svg" width="701" height="183">
+
+
 
 ```poetry
 Welcome!
 ```
 
-I'm Jacky. This is my little [[thoughts/hypertext|hypertext]] [[posts/networked-thought|garden]] on the [[thoughts/Internet|Internet]] -- make yourself at home!
+Hey there! I'm Prajwal. I'm a curious soul with a love for movies, series, [books](https://prajwalskaranth.notion.site/Prajwal-s-Bookshelves-cc1dd8bf5f0d49f2985edae525ab923c), and the thrill of trekking through uncharted paths. Whether I'm solving a Rubik's cube or diving deep into a math problem, I find joy in the little puzzles of life. Winters and springs bring me to life, especially in the hill stations where I originated, and where the crisp air and serene landscapes feel like home.
 
-Currently, I'm exploring what [[thoughts/agency|agentic]] and [[posts/agentic-computing|communal]] technology looks like at [Replit](https://replit.com/) and through my [independent research practice](/tags/rhizome). How might we create infrastructures and technologies that empower the residents of the web to have access to the same tools as the architects?
+But don’t get me wrong—beaches have a special place in my heart too, offering a calm that contrasts beautifully with the rugged hills. I'm a big fan of the Batman trilogy, which probably explains my affinity for complex characters and intricate stories. I like to think of myself as a modern-day explorer, always ready to tumble down a rabbit hole of curiosity.
 
-On a broader level, I care deeply about creating _[spaces](https://lu.ma/playspace)_ that enable others to have more [[thoughts/agency]]: agency to ask questions without judgement; agency to do what they are intrinsically drawn toward; agency to [[thoughts/play|play]] (because what's the point if we can't have a bit of fun?).
+Music is my constant companion, whether it’s the soothing strains of classical pieces or the raw energy of hip-hop. I embrace the extremes because they keep life interesting. Oh, and shoutout to ChatGPT for being my go-to digital buddy—though, unlike the movie _Her_, we're just good friends. 😉
 
-As far as 'about' pages go, I hope this acts as an open invitation into the many winding paths throughout this garden. Here are some places you may want to visit:
+So, if you’re into deep dives, quirky interests, and exploring the edges of what makes life fascinating, you’re in the right place. Let’s see where this journey takes us!  
 
-- [The oak letter desk](/posts/): a collection of my favourite [[thoughts/writing|writing]];
-- [The hand-crafted workbench](thoughts/craft.md): craft I am proud of (websites, talks, workshops, projects, etc.);
-- [The bookshelf on the far wall](/books): books that are in some state of read, being read, or to be read.
+Here are some places you may want to visit:
+* [all posts](/posts/)
+* 
 
 ```poetry
-- jacky :)
+- prajwal :)
 ```
+
+

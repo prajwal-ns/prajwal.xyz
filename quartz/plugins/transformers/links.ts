@@ -25,9 +25,9 @@ interface Options {
 }
 
 const defaultOptions: Options = {
-  markdownLinkResolution: "absolute",
+  markdownLinkResolution: "shortest",
   prettyLinks: true,
-  openLinksInNewTab: false,
+  openLinksInNewTab: true,
   lazyLoad: false,
   externalLinkIcon: true,
 }
