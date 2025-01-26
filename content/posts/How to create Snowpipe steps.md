@@ -1,6 +1,6 @@
 ---
 title: How to create Snowpipe steps
-date: 2024-07-24
+date: 2024-04-24
 tags:
   - snowflake
   - technical
