@@ -1,3 +1,6 @@
+
+
+
 The `WAIT_FOR_COMPLETION` parameter in Snowflake is used with the `ALTER WAREHOUSE` command to control whether the command waits for the warehouse resizing operation to complete before returning control to the user. This parameter is particularly useful when you need to ensure that the warehouse has fully provisioned the new compute resources before continuing with further operations.
 
 ### Valid Values
