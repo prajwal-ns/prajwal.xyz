@@ -2,7 +2,8 @@
 title: Snowflake notes
 date: 2024-08-18
 tags:
-  - seed
+  - snowflake
+  - technical
 ---
 ## 1. Snowflake Overview
 
