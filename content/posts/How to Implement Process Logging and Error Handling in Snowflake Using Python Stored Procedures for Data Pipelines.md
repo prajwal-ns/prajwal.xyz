@@ -1,5 +1,5 @@
 ---
-title: Process log & handling errors in Snowflake
+title: How to Implement Process Logging and Error Handling in Snowflake Using Python Stored Procedures for Data Pipelines
 date: 2025-01-26
 tags:
   - snowflake
