@@ -4,13 +4,13 @@ date: 2024-04-07
 tags:
   - technical
   - snowflake
----  
+---
 
 - **TABLE_STORAGE_METRICS View**
     - table-level storage utilization information, which is used to calculate the storage billing for each table in the account, including tables that have been dropped, but are still incurring storage costs
     - it contains active bytes, deleted bytes — bytes in time travel, fail-safe, bytes related to clones
 - MATERIALIZED_VIEW_REFRESH_HISTORY — This Account Usage view can be used to query the [materialized views](https://docs.snowflake.com/en/user-guide/views-materialized) refresh history. The information returned by the view includes the view name and credits consumed each time a materialized view is refreshed.
-- **COPY_HISTORY —** The view displays load activity for both [COPY INTO <table>](https://docs.snowflake.com/en/sql-reference/sql/copy-into-table) statements and continuous data loading using [Snowpipe](https://docs.snowflake.com/en/user-guide/data-load-snowpipe-intro). The view avoids the 10,000 row limitation of the [LOAD_HISTORY View](https://docs.snowflake.com/en/sql-reference/info-schema/load_history).
+- **COPY_HISTORY —** The view displays load activity for both [COPY INTO](https://docs.snowflake.com/en/sql-reference/sql/copy-into-table) statements and continuous data loading using [Snowpipe](https://docs.snowflake.com/en/user-guide/data-load-snowpipe-intro). The view avoids the 10,000 row limitation of the [LOAD_HISTORY View](https://docs.snowflake.com/en/sql-reference/info-schema/load_history).
  - **LOAD_HISTORY -- ** This Information Schema view enables you to retrieve the history of data loaded into tables using the [COPY INTO ](https://docs.snowflake.com/en/sql-reference/sql/copy-into-table) command — this doesn’t include history about snowpipe
 - **ACCESS_HISTORY** — Access History in Snowflake refers to when the user query reads data and when the SQL statement performs a data write operation along with variations of the COPY command, from the source data object to the target data object.
 - **LOGIN_HISTORY , LOGIN_HISTORY_BY_USER —**
