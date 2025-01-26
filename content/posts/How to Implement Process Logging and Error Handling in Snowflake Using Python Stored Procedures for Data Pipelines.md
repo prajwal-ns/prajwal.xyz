@@ -18,9 +18,9 @@ Process logs are detailed records of events, actions and changes that occur duri
 Process logs capture information like timestamps, error messages, source and target tables, and other performance metrics such as the duration, which indicates the time taken to complete a particular task.
 
 ## Usecases
-- troubleshooting
-- auditing
-- monitoring performance
+- Troubleshooting
+- Auditing
+- Monitoring performance
 
 ## Structure of the Stored Procedure(SP)
 
