@@ -1,3 +1,10 @@
+---
+title: TO_JSON and PARSE_JSON
+date: 2024-04-07
+tags:
+  - technical
+  - snowflake
+---
 The functions `TO_JSON` and `PARSE_JSON` in Snowflake are used for handling JSON data, but they serve different purposes.
 
 ### `TO_JSON`

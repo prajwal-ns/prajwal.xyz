@@ -1,3 +1,10 @@
+---
+title: misc
+date: 2024-04-07
+tags:
+  - technical
+  - snowflake
+---
 - to know the privileges and what it does - [https://docs.snowflake.com/en/user-guide/security-access-control-privileges#all-privileges-alphabetical](https://docs.snowflake.com/en/user-guide/security-access-control-privileges#all-privileges-alphabetical)
 - about table storage metric view - [https://docs.snowflake.com/en/sql-reference/account-usage/table_storage_metrics](https://docs.snowflake.com/en/sql-reference/account-usage/table_storage_metrics)
 

@@ -1,4 +1,10 @@
-  
+---
+title: account usage-information schema
+date: 2024-04-07
+tags:
+  - technical
+  - snowflake
+---  
 
 - **TABLE_STORAGE_METRICS View**
     - table-level storage utilization information, which is used to calculate the storage billing for each table in the account, including tables that have been dropped, but are still incurring storage costs

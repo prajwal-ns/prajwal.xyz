@@ -1,3 +1,11 @@
+---
+title: Access privileges
+date: 2024-04-07
+tags:
+  - technical
+  - snowflake
+---
+
 | **Services**                         | **Access Privileges**                                                                                                                               |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Search Optimization services         | OWNERSHIP privilege on the table  <br>ADD SEARCH OPTIMIZATION privilege on the schema that contains the table                                       |

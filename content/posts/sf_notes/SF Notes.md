@@ -1,3 +1,11 @@
+---
+title: SF Notes
+date: 2024-04-07
+tags:
+  - technical
+  - snowflake
+---
+
 ~ Prajwal N S
 
 Interview Questions:
