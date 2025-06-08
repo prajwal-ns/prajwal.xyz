@@ -5,7 +5,7 @@ tags:
   - snowflake
   - technical
 ---
-### The Agony of Manual Wide-Table DML Operations
+## The Agony of Manual Wide-Table DML Operations
 
 Ever stared at a Snowflake table with **100+ columns** and felt your soul leave your body at the thought of manually typing them all in a `MERGE` statement? Yeah, me too.
 
@@ -34,7 +34,7 @@ Not only is this excruciatingly painful to do manually, also there's a risk:
 * Table Structure changed? Good luck updating those columns
 * Bored to death? Of course!
 There _must_ be a way to fetch columns dynamically, so let's dive in.
-### Framework Foundations
+## Framework Foundations
 
 Here's the approach which should be followed:
 1. **Query `INFORMATION_SCHEMA` for Column Names**
@@ -75,7 +75,7 @@ res_df = snowpark_session.sql(sql02).collect()
 
 It's better to store source and target table in variables than using it directly.
 
-### Real-World Example: Salesforce Opportunity Object
+## Real-World Example: Salesforce Opportunity Object
 
 To relate with real time scenario I've used Opportunity object which has 100+ columns and it's mostly used when there's an integration from Salesforce to Snowflake.
 
@@ -87,7 +87,7 @@ Here are columns pulled from `INFORMATION_SCHEMA`:
 
 ![[Pasted image 20250608210553.png]]
 
-### Demo 
+## Demo 
 
 Sample Opportunity Data:
 
@@ -122,14 +122,14 @@ Executing the procedure again, record got updated:
 Data in target table:
 ![[Pasted image 20250608225710.png]]
 
- ### **Why this is helpful?** 
+ ## **Why this is helpful?** 
  
 - **No manual column listing** → **Zero typos**  
 - **Automatically adapts** if new columns are added  
 - **Saves hours** of boring, repetitive work  
 - **Clean, maintainable code** (future you will thank you)
 
-Few things that should be considered:
+## **Few things that should be considered:**
 - **Exclude certain columns** (like audit fields) by filtering the `INFORMATION_SCHEMA` query.
 - Dynamic column handling can be used in most of the DML operations. Try it!
 - **Add dry-run mode** to test before executing.
