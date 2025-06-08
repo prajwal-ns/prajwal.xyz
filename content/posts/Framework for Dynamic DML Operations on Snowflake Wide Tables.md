@@ -74,35 +74,27 @@ res_df = snowpark_session.sql(sql02).collect()
 ```
 
 It's better to store source and target table in variables than using it directly.
-
 ## Real-World Example: Salesforce Opportunity Object
 
 To relate with real time scenario I've used Opportunity object which has 100+ columns and it's mostly used when there's an integration from Salesforce to Snowflake.
 
 Here are columns pulled from `INFORMATION_SCHEMA`:
-
 ![[Pasted image 20250608210339.png]]
 
-**Total columns: 154**
-
+Total columns: 154  
 ![[Pasted image 20250608210553.png]]
-
 ## Demo 
 
 Sample Opportunity Data:
-
 ![[Pasted image 20250608212117.png]]
 
 No records in target table:
-
 ![[Pasted image 20250608212454.png]]
 
 Executing the stored procedure
-
 ![[Pasted image 20250608212755.png]]
 
 Stream creation for CDC
-
 ``` sql
 create or replace stream TRANSFORMATION.ST_OPPORTUNITY
 on table raw.OPPORTUNITY
@@ -110,20 +102,16 @@ show_initial_rows=true;
 ```
 
 Post Execution result
-
 ![[Pasted image 20250608213200.png]]
 
 Updated 1 record to validate:
-
 Executing the procedure again, record got updated:
-
 ![[Pasted image 20250608213745.png]]
 
 Data in target table:
 ![[Pasted image 20250608225710.png]]
 
- ## **Why this is helpful?** 
- 
+ ## **Why this is helpful?**  
 - **No manual column listing** → **Zero typos**  
 - **Automatically adapts** if new columns are added  
 - **Saves hours** of boring, repetitive work  
