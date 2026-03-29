@@ -1,18 +1,34 @@
-# Quartz v4
+# prajwal.xyz
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+This repository contains the source code and content for my personal website: **prajwal.xyz**.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+The site is a place where I write and publish:
+- Articles and essays on learning, systems, and growth
+- Notes from my work and studies in data engineering (Snowflake, SQL, Python)
+- Personal reflections and long-form thinking
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+The goal of this site is simple:  
+**to think clearly in public and build a body of work over time.**
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+---
 
-## Sponsors
+## About Me
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+I’m a data engineer working primarily with Snowflake and Python.  
+I enjoy breaking down complex systems, documenting what I learn, and writing to sharpen my understanding.
+
+This site acts as:
+- A public notebook
+- A writing archive
+- A long-term personal knowledge base
+
+---
+
+## Tech Stack
+
+The website is built using **Quartz**, an open-source, Markdown-first static site generator.
+
+Content is written in Markdown and published as a static site.
+
+---
+
