@@ -8,7 +8,7 @@ tags:
 
 ## Snowflake DCM Projects
 
-Snowflake DCM Projects (Database Change Management Projects) is like giving a blueprint to Snowflake on how the objects should look and leaving the rest to Snowflake. Snowflake follows the blueprint and creates all the necessary objects. In layman's terms, it's like Automatic Tesla Car vs Manual Car ; for a Tesla you'll just have to instruct where to go and it'll take you there, meanwhile a Manual car would be you carefully shifting the gears and pressing accelerators at the right time. Of course both are cool, but in terms of scalable projects where you've multiple tenants to maintain, it'll be a pain to manually add one procedure after the other.
+Snowflake DCM Projects (Database Change Management Projects) is like giving a blueprint to Snowflake on how the objects should look and leaving the rest to Snowflake. Snowflake follows the blueprint and creates all the necessary objects. In layman's terms, it's like Automatic Tesla Car vs Manual Car, for a Tesla you'll just have to instruct where to go and it'll take you there, meanwhile a Manual car would be you carefully shifting the gears and pressing accelerators at the right time. Of course both are cool, but in terms of scalable projects where you've multiple tenants to maintain, it'll be a pain to manually add one procedure after the other.
 
 ## What you'll Build by the End
 
@@ -20,9 +20,9 @@ Instead of treating Snowflake objects as objects that change with ad-hoc DDL, we
 
 **wdym treating it as code?**
 
-So we'll define how the databases, tables, procedures ; basically any (supported) objects ; should look like in a file (we can call it a blueprint) and Snowflake will make sure all the objects look like how it's defined in the blueprint. This will enable version-controlled (lord git), repeatable environments, such as Dev, Prod and ; if you're not a risk taker ; even environments like QA, where you can plan and then deploy as a workflow.
+So we'll define how the databases, tables, procedures, basically any (supported) objects should look like in a file (we can call it a blueprint) and Snowflake will make sure all the objects look like how it's defined in the blueprint. This will enable version-controlled (lord git), repeatable environments, such as Dev, Prod and, if you're not a risk taker even environments like QA, where you can plan and then deploy as a workflow.
 
-If your definitions are repetitive you can parameterize your code by using Jinja templating, including dictionaries, loops, conditions, and macros. For example, you want audit columns in all the tables (like any sane person would); then instead of defining them in every table you can just use a Jinja macro and oh, this is just the tip of the iceberg!
+If your definitions are repetitive you can parameterize your code by using Jinja templating, including dictionaries, loops, conditions, and macros. For example, you want audit columns in all the tables (like any sane person would), then instead of defining them in every table you can just use a Jinja macro and oh, this is just the tip of the iceberg!
 
 ### Workflow
 
@@ -85,7 +85,7 @@ your-github-repo/ OR Snowsight Workspace
 ```
 
 
-![[DCM Project Folder structure.jpg]]
+![[DCM Project Snowflake project folder.jpg]]
 
 ## Project Setup
 
@@ -112,7 +112,7 @@ GRANT ROLE DCM_ADMIN TO ROLE SYSADMIN;
 
 ### Step 2: Create the Parent Databases
 
-A DCM project lives inside a database, and here's a fun gotcha ; **it cannot manage its own parent database**. So we create them upfront. Notice we switch to `DCM_ADMIN` here ; everything from this point onwards is created by this role, so it automatically owns everything. No ownership transfer headaches later.
+A DCM project lives inside a database, and here's a fun gotcha, **it cannot manage its own parent database**. So we create them upfront. Notice we switch to `DCM_ADMIN` here, everything from this point onwards is created by this role, so it automatically owns everything. No ownership transfer headaches later.
 
 ```sql
 USE ROLE DCM_ADMIN;
@@ -162,7 +162,7 @@ Then set the public key on the service user (copy the key content without the BE
 ALTER USER SVC_DCM_CICD SET RSA_PUBLIC_KEY = '<paste_public_key_here>';
 ```
 
-The private key goes into **GitHub Secrets** (we'll cover that in the CI/CD section). The public key stays in Snowflake. They form a cryptographic pair ; GitHub proves its identity by signing a JWT with the private key, Snowflake verifies it with the public key. No passwords flying around.
+The private key goes into **GitHub Secrets** (we'll cover that in the CI/CD section). The public key stays in Snowflake. They form a cryptographic pair, GitHub proves its identity by signing a JWT with the private key, Snowflake verifies it with the public key. No passwords flying around.
 
 **Important**: The private key must be in **PKCS#8 format** (starts with `-----BEGIN PRIVATE KEY-----`). If yours says `BEGIN RSA PRIVATE KEY`, it's PKCS#1 and Snowflake will reject it.
 
@@ -239,7 +239,7 @@ Two targets, two configurations, one set of SQL files. When you deploy with `USI
 
 ## Writing Definition Files
 
-This is where the real fun begins. We write DEFINE statements instead of CREATE ; and Snowflake figures out whether it needs to CREATE, ALTER, or DROP to match your desired state.
+This is where the real fun begins. We write DEFINE statements instead of CREATE, and Snowflake figures out whether it needs to CREATE, ALTER, or DROP to match your desired state.
 
 ### sf_infrastructure.sql ; The Schemas & Tables
 
@@ -352,7 +352,7 @@ GRANT ROLE FR_{{ env }}_SF_TRANSFORM TO ROLE DCM_ADMIN;
 GRANT ROLE FR_{{ env }}_SF_REPORTING TO ROLE DCM_ADMIN;
 ```
 
-The beauty here is that this entire role hierarchy ; 9 roles, dozens of grants ; gets created in both dev and prod from the same file. Change it once, deploy everywhere.
+The beauty here is that this entire role hierarchy, 9 roles, dozens of grants, gets created in both dev and prod from the same file. Change it once, deploy everywhere.
 
 ## PLAN & DEPLOY
 
@@ -463,7 +463,7 @@ DCM doesn't re-create everything. It only applies the delta. That's the whole po
 
 ## CI/CD with GitHub Actions
 
-So far we've been running PLAN and DEPLOY manually from Snowsight. That works, but let's be real ; we're engineers, we automate things. The goal: push code to GitHub, and let GitHub Actions handle the rest.
+So far we've been running PLAN and DEPLOY manually from Snowsight. That works, but let's be real, we're engineers, we automate things. The goal: push code to GitHub, and let GitHub Actions handle the rest.
 
 ### How It Works ; The 30-Second Version
 
@@ -704,7 +704,7 @@ Open a PR on GitHub.
 
 **5. Merge the PR:**
 - `DCM Deploy on Merge` workflow starts
-- DEV deploys automatically ; `SF_LEADS` table is created in `DEV_SF_DB.RAW`
+- DEV deploys automatically, `SF_LEADS` table is created in `DEV_SF_DB.RAW`
 - PROD deploy pauses, waiting for approval
 
 **6. Approve PROD deployment in GitHub Actions:**
@@ -837,19 +837,19 @@ This blog covered the core workflow, but there's more you can do with DCM Projec
 
 ## Key Takeaways
 
-1. **DCM Projects = Terraform for Snowflake** ; declarative, stateful, diffable. You define the desired state, Snowflake figures out how to get there.
+1. **DCM Projects = Terraform for Snowflake**: declarative, stateful, diffable. You define the desired state, Snowflake figures out how to get there.
 
-2. **One codebase, multiple environments** ; Jinja templating and manifest configurations mean you never copy-paste SQL between dev and prod again. Ever.
+2. **One codebase, multiple environments**: Jinja templating and manifest configurations mean you never copy-paste SQL between dev and prod again. Ever.
 
-3. **PLAN before DEPLOY, always** ; It takes 5 seconds and can save you from dropping a production table. There's no excuse.
+3. **PLAN before DEPLOY, always**: It takes 5 seconds and can save you from dropping a production table. There's no excuse.
 
-4. **Roles and grants are code** ; No more clicking through Snowsight to set up permissions. Define your entire RBAC hierarchy in SQL, version it in Git, deploy it with one command.
+4. **Roles and grants are code**:  No more clicking through Snowsight to set up permissions. Define your entire RBAC hierarchy in SQL, version it in Git, deploy it with one command.
 
-5. **CI/CD is not optional** ; Once you've tasted automated PLAN-on-PR and DEPLOY-on-merge, you'll never want to run `EXECUTE DCM PROJECT` manually again.
+5. **CI/CD is not optional**:  Once you've tasted automated PLAN-on-PR and DEPLOY-on-merge, you'll never want to run `EXECUTE DCM PROJECT` manually again.
 
-6. **Use a dedicated role from the start** ; Create `DCM_ADMIN`, use it for everything. Your future self will thank you when you're not transferring ownership on 30 objects at 11pm.
+6. **Use a dedicated role from the start**: Create `DCM_ADMIN`, use it for everything. Your future self will thank you when you're not transferring ownership on 30 objects at 11pm.
 
-7. **Gotchas are real** ; Parent database limitation, PKCS#8 keys, account identifier formats, workflow files on main. Bookmark this blog (shameless plug).
+7. **Gotchas are real**: Parent database limitation, PKCS#8 keys, account identifier formats, workflow files on main. Bookmark this blog (shameless plug).
 
 ---
 
