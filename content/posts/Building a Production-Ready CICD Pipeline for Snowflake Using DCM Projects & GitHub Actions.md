@@ -8,7 +8,7 @@ tags:
 
 ## Snowflake DCM Projects
 
-Snowflake DCM Projects (Database Change Management Projects) is like giving a blueprint to Snowflake on how the objects should look and leaving the rest to Snowflake. Snowflake follows the blueprint and creates all the necessary objects. In layman's terms, it's like Automatic Tesla Car vs Manual Car, for a Tesla you'll just have to instruct where to go and it'll take you there, meanwhile a Manual car would be you carefully shifting the gears and pressing accelerators at the right time. Of course both are cool, but in terms of scalable projects where you've multiple tenants to maintain, it'll be a pain to manually add one procedure after the other.
+Snowflake DCM Projects (Database Change Management Projects) is like giving a blueprint to Snowflake on how the objects should look and leaving the rest to Snowflake. Snowflake follows the blueprint and creates all the necessary objects. In layman's terms, it's like Automatic Tesla Car vs Manual Car, for a Tesla you'll just have to instruct where to go and it'll take you there, meanwhile a Manual car would be you carefully shifting the gears and pressing accelerators at the right time. Of course both are cool, but in terms of scalable projects where you've multiple tenants to maintain, it'll be a pain to manually add one object after the other.
 
 ## What you'll Build by the End
 
@@ -20,7 +20,7 @@ Instead of treating Snowflake objects as objects that change with ad-hoc DDL, we
 
 **wdym treating it as code?**
 
-So we'll define how the databases, tables, procedures, basically any (supported) objects should look like in a file (we can call it a blueprint) and Snowflake will make sure all the objects look like how it's defined in the blueprint. This will enable version-controlled (lord git), repeatable environments, such as Dev, Prod and, if you're not a risk taker even environments like QA, where you can plan and then deploy as a workflow.
+So we'll define how the databases, tables, functions, basically any (supported) objects should look like in a file (we can call it a blueprint) and Snowflake will make sure all the objects look like how it's defined in the blueprint. This will enable version-controlled (lord git), repeatable environments, such as Dev, Prod and, if you're not a risk taker even environments like QA, where you can plan and then deploy as a workflow.
 
 If your definitions are repetitive you can parameterize your code by using Jinja templating, including dictionaries, loops, conditions, and macros. For example, you want audit columns in all the tables (like any sane person would), then instead of defining them in every table you can just use a Jinja macro and oh, this is just the tip of the iceberg!
 
@@ -854,3 +854,6 @@ This blog covered the core workflow, but there's more you can do with DCM Projec
 ---
 
 *The complete code for this project is available on [GitHub](https://github.com/prajwal-ns/Snowflake-DCM-Project).*
+
+References:
+[_Snowflake DCM Projects_](https://docs.snowflake.com/en/user-guide/dcm-projects/dcm-projects-overview)
